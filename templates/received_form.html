@@ -1,0 +1,33 @@
+
+
+{% extends 'basestructure.html' %} 
+
+
+{% block body%}
+<table>
+    <thead>
+       <tr>
+          <th>  id   </th>
+          <th>  Email  </th>
+          <th>  Phone  </th>
+          <th>  Ticker Symbol  </th>
+          <th>  frequency of repetation  </th>
+          <th>  threshold  </th>
+       </tr>
+    </thead>
+    
+    <tbody>
+       {% for user in users %}
+          <tr>
+             <td>{{ user.id }}</td>
+             <td>{{ user.email }}</td>
+             <td>{{ user.phone }}</td>
+             <td>{{ user.ticker }}</td>
+             <td>{{ user.frequency }}</td>
+             <td>{{ user.threshold }}</td>
+          </tr>
+       {% endfor %}
+    </tbody>
+ </table>
+
+ {%endblock%}

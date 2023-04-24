@@ -1,0 +1,22 @@
+p{
+    font-size: 20px;
+    color: black;
+}
+
+label{
+    font-size: 20px;
+    color: black;
+}
+input{
+    width: 55%;
+}
+
+input[type = submit]{
+    width: 20%;
+    margin-left: 30%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}

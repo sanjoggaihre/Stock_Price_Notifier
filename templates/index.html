@@ -1,0 +1,35 @@
+{% extends 'basestructure.html' %}
+
+{% block head%}
+
+
+{% endblock %}
+
+{% block body%}
+
+
+<form action = "http://localhost:5000/notification" method = "POST">
+    <h1> Stock Notifier <h1>
+    <label for="ticker_symbol">Ticker Symbol:</label>
+    <input type = 'text' id = 'ticker' name = 'ticker' placeholder = 'meta' /><br>
+    <label for="threshold">Threshold Price:</label>
+    <input type = 'number' id = 'threshold' name = 'threshold' placeholder = '130'/><br>
+    <label for="email">Email:</label>
+    <input type = 'text' id = 'email' name = 'email' placeholder = 'name@example.com'/><br> 
+    <label for="phone">Phone number:</label>
+    <input type = 'text' id = 'phone' name = 'number' placeholder = '+977..........'/><br>
+    <label for="notification">Notification method:</label>
+    <select id = 'notification' name="notification">
+        <option value="Email">Email</option>
+        <option value="Phone">Phone Msg</option>
+    </select><br>
+
+    <label for="frequency">Frequency of checking stock:</label>
+    <select id = 'freq' name="frequency">
+        <option value="60">Every minute</option>
+        <option value="3600">Every hour</option>
+        <option value="86400">Every day</option>
+    </select>
+    <p><input type = 'submit' value = 'submit' /> </p>
+</form>
+{% endblock %}
